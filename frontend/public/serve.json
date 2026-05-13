@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/vr-tour/**", "destination": "/vr-tour/$1" },
+    { "source": "/**", "destination": "/index.html" }
+  ]
+}
