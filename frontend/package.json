@@ -19,8 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-"build": "react-scripts build && cp -rv public/vr-tour/* build/vr-tour/"    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+"build": "react-scripts build && cp -rv public/vr-tour/* build/vr-tour/"    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
