@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/vr-tour/**", "destination": "/vr-tour/$1" },
-    { "source": "/**", "destination": "/index.html" }
+    { "source": "/vr-tour/:path*", "destination": "/vr-tour/:path*" },
+    { "source": "/((?!vr-tour|static|images|.*\\..*).*)", "destination": "/index.html" }
   ]
 }
