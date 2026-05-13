@@ -2,10 +2,10 @@
 nixPkgs = ["nodejs_18"]
 
 [phases.install]
-cmds = ["npm install", "npm install -g serve"]
+cmds = ["npm install"]
 
 [phases.build]
 cmds = ["npm run build"]
 
 [start]
-cmd = "serve -s build -l ${PORT:-3000}"
+cmd = "node server.js"
