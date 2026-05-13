@@ -65,6 +65,30 @@ Chạy tại http://localhost:3000
 - Responsive design
 - 13 property-based tests (fast-check)
 
+## VR Tour 360° (tùy chọn)
+
+Thư mục VR Tour (~2GB ảnh panorama) không nằm trên GitHub vì quá lớn. Nếu muốn chạy tính năng "Tham quan 360°":
+
+1. Tải file VR Tour từ Google Drive: `[link do team cung cấp]`
+2. Giải nén và copy toàn bộ nội dung vào `frontend/public/vr-tour/`
+3. Đảm bảo file `frontend/public/vr-tour/tour.html` tồn tại
+
+```
+frontend/public/vr-tour/
+├── tour.html          ← file chính
+├── tour.js
+├── tour.xml
+├── app.js
+├── style.css
+├── panos/             ← 164 thư mục ảnh panorama
+├── skin/
+└── plugins/
+```
+
+Sau đó truy cập http://localhost:3000/tham-quan để xem VR Tour.
+
+> Nếu không có thư mục `vr-tour`, trang `/tham-quan` sẽ hiện trắng - các trang khác vẫn hoạt động bình thường.
+
 ## Tech Stack
 
 React 19 · React Router v7 · CSS thuần · Node.js · Express 5 · MySQL 8 · KRpano · DOMPurify · fast-check
