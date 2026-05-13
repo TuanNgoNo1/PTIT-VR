@@ -26,8 +26,12 @@ npm-debug.log*
 # Testing
 coverage/
 
-# VR Tour (large assets - download separately
+# VR Tour source (duplicate, dùng frontend/public/vr-tour/ thay thế)
 vr/
+
+# VR Tour - exclude backup files và test server (không cần deploy)
+frontend/public/vr-tour/tour.xml - backup-*
+frontend/public/vr-tour/tour_testingserver*
 
 # Kiro IDE
 .kiro/
