@@ -69,7 +69,7 @@ Chạy tại http://localhost:3000
 
 Thư mục VR Tour (~2GB ảnh panorama) không nằm trên GitHub vì quá lớn. Nếu muốn chạy tính năng "Tham quan 360°":
 
-1. Tải file VR Tour từ Google Drive: `[link do team cung cấp]`
+1. Tải file VR Tour từ Google Drive: `https://drive.google.com/drive/u/2/folders/12DMLA17ltSVaVe0XgoL8TanMR60obliz`
 2. Giải nén và copy toàn bộ nội dung vào `frontend/public/vr-tour/`
 3. Đảm bảo file `frontend/public/vr-tour/tour.html` tồn tại
 
