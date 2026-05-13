@@ -11,7 +11,7 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
-  ssl: process.env.DB_HOST ? { rejectUnauthorized: true } : undefined,
+  ssl: process.env.DB_HOST ? { rejectUnauthorized: false } : undefined,
 });
 
 // Chuyển đổi sang sử dụng Promise để có thể dùng async/await
