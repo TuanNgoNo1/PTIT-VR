@@ -9,7 +9,7 @@ const buildPath = path.join(__dirname, 'build');
 app.use(express.static(buildPath));
 
 // SPA fallback: any route that doesn't match a static file → index.html
-app.get('*', (req, res) => {
+app.get('{*path}', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'));
 });
 
