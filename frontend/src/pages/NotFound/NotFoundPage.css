@@ -1,0 +1,31 @@
+.not-found {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.not-found h1 {
+  font-size: 48px;
+  color: var(--color-primary);
+  margin: 0 0 16px;
+}
+
+.not-found p {
+  font-size: 16px;
+  color: var(--color-text-light);
+  margin-bottom: 24px;
+}
+
+.not-found a {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.not-found a:hover {
+  background: var(--color-primary-dark);
+  text-decoration: none;
+}

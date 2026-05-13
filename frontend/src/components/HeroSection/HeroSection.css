@@ -1,0 +1,243 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: #1a0505;
+  color: #ffffff;
+}
+
+/* Slides */
+.hero__slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero__slide--active {
+  opacity: 1;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__slide--active .hero__image {
+  animation: kenburns 8s ease-out forwards;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero);
+}
+
+/* Content */
+.hero__content {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--container-padding);
+  text-align: center;
+}
+
+.hero__text {
+  max-width: 900px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  position: absolute;
+  pointer-events: none;
+  width: calc(100% - var(--container-padding) * 2);
+}
+
+.hero__text--active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+  pointer-events: auto;
+}
+
+.hero__title {
+  font-size: var(--font-size-hero);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 36px;
+  border: 2px solid #ffffff;
+  border-radius: var(--border-radius-pill);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all var(--transition-base);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.hero__cta:hover {
+  background: #ffffff;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+.hero__cta-arrow {
+  transition: transform var(--transition-base);
+}
+
+.hero__cta:hover .hero__cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Counter */
+.hero__counter {
+  position: absolute;
+  bottom: 40px;
+  left: var(--container-padding);
+  z-index: 5;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__counter-current {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero__counter-divider {
+  opacity: 0.5;
+}
+
+.hero__counter-total {
+  opacity: 0.7;
+}
+
+/* Vertical nav arrows */
+.hero__nav {
+  position: absolute;
+  right: var(--container-padding);
+  bottom: 40px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero__nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-base);
+}
+
+.hero__nav-btn:hover {
+  background: #ffffff;
+  color: var(--color-primary);
+  border-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.hero__nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Scroll down */
+.hero__scroll-down {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.hero__scroll-down svg {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.hero__scroll-down:hover {
+  color: #ffffff;
+}
+
+.hero__scroll-down svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+  .hero__title {
+    font-size: var(--font-size-2xl);
+  }
+  .hero__subtitle {
+    font-size: 14px;
+  }
+  .hero__counter,
+  .hero__nav {
+    display: none;
+  }
+  .hero__cta {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

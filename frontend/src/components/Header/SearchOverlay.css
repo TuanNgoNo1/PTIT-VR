@@ -1,0 +1,111 @@
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 5, 5, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.search-overlay--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-overlay__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background var(--transition-base);
+}
+
+.search-overlay__close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.search-overlay__close svg {
+  width: 22px;
+  height: 22px;
+}
+
+.search-overlay__content {
+  width: 100%;
+  max-width: 720px;
+  padding: 0 24px;
+  text-align: center;
+  transform: translateY(-20px);
+  transition: transform var(--transition-base);
+}
+
+.search-overlay--open .search-overlay__content {
+  transform: translateY(0);
+}
+
+.search-overlay__title {
+  color: #ffffff;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.search-overlay__form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 12px;
+  transition: border-color var(--transition-base);
+}
+
+.search-overlay__form:focus-within {
+  border-color: var(--color-accent);
+}
+
+.search-overlay__icon {
+  width: 24px;
+  height: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.search-overlay__input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 8px 0;
+}
+
+.search-overlay__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-overlay__hint {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .search-overlay__title {
+    font-size: var(--font-size-xl);
+  }
+  .search-overlay__input {
+    font-size: 18px;
+  }
+}

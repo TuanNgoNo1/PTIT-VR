@@ -1,0 +1,14 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout__content {
+  flex: 1;
+}
+
+/* Inner pages need padding-top because header is fixed */
+.layout__content--inner {
+  padding-top: var(--header-height);
+}

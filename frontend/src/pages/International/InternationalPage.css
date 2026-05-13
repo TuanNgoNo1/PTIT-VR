@@ -1,0 +1,8 @@
+.international-page { padding: 20px 0 40px; }
+.international-page__section { margin-bottom: 30px; }
+.international-page__section h2 { font-size: 20px; color: var(--color-primary); margin: 0 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--color-primary); }
+.international-page__partners { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.international-page__partner { background: var(--color-white); border-radius: var(--border-radius); padding: 20px; box-shadow: 0 2px 8px var(--color-shadow); text-align: center; text-decoration: none; color: var(--color-text); transition: transform 0.2s; }
+.international-page__partner:hover { transform: translateY(-2px); text-decoration: none; }
+.international-page__partner-name { font-size: 14px; font-weight: 500; }
+.international-page__posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }

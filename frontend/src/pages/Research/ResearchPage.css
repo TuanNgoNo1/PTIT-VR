@@ -1,0 +1,8 @@
+.research-page { padding: 20px 0 40px; }
+.research-page__section { margin-bottom: 30px; }
+.research-page__section h2 { font-size: 20px; color: var(--color-primary); margin: 0 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--color-primary); }
+.research-page__areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.research-page__area { background: var(--color-white); border-radius: var(--border-radius); padding: 20px; box-shadow: 0 2px 8px var(--color-shadow); }
+.research-page__area h3 { font-size: 15px; margin: 0 0 8px; color: var(--color-primary); }
+.research-page__area p { font-size: 14px; color: var(--color-text-light); margin: 0; line-height: 1.5; }
+.research-page__posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }

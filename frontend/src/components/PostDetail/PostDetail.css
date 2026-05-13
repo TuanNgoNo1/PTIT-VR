@@ -1,0 +1,147 @@
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+/* HERO BANNER: Kỹ thuật đè chữ lên ảnh */
+.ptit-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 410px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  object-position: center 80%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #08133980; /* Lớp phủ mờ tối màu */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  width: 1190px;
+}
+
+.hero-title {
+  font-size: 42px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+  max-height: calc(1.3em * 2);
+}
+
+/* LAYOUT 70/30 */
+.ptit-main-layout {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+.ptit-article {
+  flex: 0 0 70%;
+}
+.article-title {
+  color: #051a53;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.article-meta {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* CONTENT */
+.post-content-render {
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+}
+.post-content-render img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* SIDEBAR */
+.ptit-sidebar {
+  flex: 0 0 30%;
+}
+.widget-title {
+  font-size: 16px;
+  color: #051a53;
+  border-left: 4px solid #b71a1a;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.related-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.related-thumb {
+  width: 112px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.related-date {
+  font-size: 12px;
+}
+.related-title {
+  width: 140px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.related-item:hover .related-title {
+  color: #b71a1a;
+}

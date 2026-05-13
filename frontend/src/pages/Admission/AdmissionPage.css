@@ -1,0 +1,131 @@
+/* Methods grid */
+.admission-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.admission-method-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.admission-method-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.admission-method-card:hover::after {
+  transform: scaleX(1);
+}
+
+.admission-method-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.admission-method-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.admission-method-card__icon {
+  font-size: 32px;
+}
+
+.admission-method-card__number {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.3;
+}
+
+.admission-method-card__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-sm);
+  line-height: 1.4;
+}
+
+.admission-method-card__desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Scores table */
+.admission-scores-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.admission-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admission-table th {
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admission-table td {
+  padding: 12px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admission-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admission-table__year td {
+  background: var(--color-bg-light);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-primary);
+  padding: 10px 20px;
+}
+
+.admission-table__score {
+  display: inline-block;
+  background: var(--color-bg-light);
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.admission-table tr:hover td {
+  background: var(--color-bg-light);
+}
+
+@media (max-width: 768px) {
+  .admission-methods-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,146 @@
+.admission-section {
+  background: #ffffff;
+}
+
+.admission-section__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.admission-section__title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.admission-section__scroller {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--spacing-md);
+  margin: 0 calc(var(--container-padding) * -1);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.admission-section__scroller::-webkit-scrollbar {
+  height: 6px;
+}
+
+.admission-section__scroller::-webkit-scrollbar-track {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.admission-section__scroller::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+.admission-section__cards {
+  display: flex;
+  gap: var(--spacing-lg);
+  width: max-content;
+}
+
+.admission-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.admission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  text-decoration: none;
+  color: inherit;
+}
+
+.admission-card__image-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.admission-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.admission-card:hover .admission-card__image {
+  transform: scale(1.08);
+}
+
+.admission-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(45, 10, 10, 0.92) 100%);
+}
+
+.admission-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-lg);
+  color: #ffffff;
+  z-index: 2;
+}
+
+.admission-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 var(--spacing-sm);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.admission-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1.5px solid #ffffff;
+  border-radius: var(--border-radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  transition: all var(--transition-base);
+}
+
+.admission-card:hover .admission-card__cta {
+  background: #ffffff;
+  color: var(--color-primary);
+}
+
+.admission-card:hover .admission-card__cta span {
+  transform: translateX(4px);
+}
+
+.admission-card__cta span {
+  transition: transform var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .admission-card {
+    width: 260px;
+    height: 360px;
+  }
+}

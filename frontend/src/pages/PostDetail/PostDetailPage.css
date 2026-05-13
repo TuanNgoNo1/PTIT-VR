@@ -1,0 +1,115 @@
+.post-detail {
+  padding: 20px 0 40px;
+}
+
+.post-detail__layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+}
+
+.post-detail__main {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.post-detail__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.post-detail__meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.post-detail__content {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.post-detail__content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+.post-detail__content p {
+  margin: 12px 0;
+}
+
+/* Sidebar */
+.post-detail__sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + 20px);
+  height: fit-content;
+}
+
+.post-detail__related {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.post-detail__related h3 {
+  font-size: 16px;
+  color: var(--color-primary);
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.post-detail__related-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.post-detail__related-item:hover {
+  background-color: var(--color-bg);
+}
+
+.post-detail__related-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.post-detail__related-title {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color var(--transition-fast, 0.2s);
+}
+
+.post-detail__related-item:hover .post-detail__related-title {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .post-detail__layout {
+    grid-template-columns: 1fr;
+  }
+}
