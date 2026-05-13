@@ -26,10 +26,8 @@ npm-debug.log*
 # Testing
 coverage/
 
-# VR Tour (large assets - download separately, paste into frontend/public/vr-tour/)
+# VR Tour (large assets - download separately
 vr/
-frontend/public/vr-tour/*
-!frontend/public/vr-tour/.gitkeep
 
 # Kiro IDE
 .kiro/
