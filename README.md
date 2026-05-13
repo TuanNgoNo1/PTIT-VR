@@ -50,7 +50,6 @@ Chạy tại http://localhost:3000
 │       ├── hooks/        # Custom hooks
 │       ├── utils/        # Helpers, API wrapper
 │       └── router/       # React Router config
-├── vr/vr/            # VR Tour 360° (KRpano standalone)
 └── database.sql      # Schema + seed data (30 bài viết)
 ```
 
