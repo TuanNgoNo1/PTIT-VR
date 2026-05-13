@@ -1,6 +1,13 @@
 {
   "rewrites": [
-    { "source": "/vr-tour/:path*", "destination": "/vr-tour/:path*" },
-    { "source": "/((?!vr-tour|static|images|.*\\..*).*)", "destination": "/index.html" }
+    { "source": "/**", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/vr-tour/**",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    }
   ]
 }
